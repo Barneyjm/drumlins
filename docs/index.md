@@ -26,11 +26,51 @@ This study tests that last idea, and what happens after the bumps form, against 
 
 As far as we can tell from the literature we read, these parts are new. Our reading was not exhaustive, so some of them may already exist.
 
-- **One method across many fields.** Large drumlin inventories are usually mapped region by region by hand, for example the roughly 59,000 drumlins of Britain and Ireland in [Clark et al. (2009)](https://www.sciencedirect.com/science/article/abs/pii/S0277379108002540). Here a single automated detector and classifier, checked blind in each field, was run over 16 fields in North America, Britain, Ireland and Patagonia. That lets shape be compared between fields without differences in mapping style.
-- **A within-field margin gradient across several ice sheets.** Drumlins get stubbier toward the maximum ice limit, out to about 60 km. It shows up in every cold-margin field near a dated ice limit (Green Bay, Langlade, Pierz in the Laurentide; Magellan–Otway in Patagonia), and again at a modern Icelandic surge glacier.
-- **A direct test of the instability theory's speed prediction.** The theory predicts how drumlin shape should change with ice speed. We measured that change in the field and found it goes the other way.
-- **Cumulative slip tested beyond one field.** [Zoet et al. (2021)](https://onlinelibrary.wiley.com/doi/10.1002/esp.5192) linked elongation to cumulative slip under the Green Bay Lobe. We reproduce their result there, and find it holds pooled across fields but with a different strength in each.
-- **Width is nearly fixed; length does the varying.** Across fields, median width changes by a factor of 1.8 and median length by 2.2, and elongation follows length.
+### One method across many fields
+
+Large drumlin inventories are usually mapped region by region by hand, for example the roughly 59,000 drumlins of Britain and Ireland in [Clark et al. (2009)](https://www.sciencedirect.com/science/article/abs/pii/S0277379108002540). Here a single automated detector and classifier, checked blind in each field, was run over 16 fields in North America, Britain, Ireland and Patagonia. That lets shape be compared between fields without differences in mapping style.
+
+<figure markdown="span">
+  [![The same pipeline runs in every field, so shapes can be compared directly.](assets/new_method.svg)](assets/new_method.svg)
+  <figcaption>The same pipeline runs in every field, so shapes can be compared directly.</figcaption>
+</figure>
+
+### A within-field margin gradient across several ice sheets
+
+Drumlins get stubbier toward the maximum ice limit, out to about 60 km. It shows up in every cold-margin field near a dated ice limit (Green Bay, Langlade, Pierz in the Laurentide; Magellan–Otway in Patagonia), and again at a modern Icelandic surge glacier.
+
+<figure markdown="span">
+  [![Drumlins near the ice limit are stubbier than their field average; the effect fades beyond about 60 km. Values are the pooled bin means from the Stage 2 chart.](assets/new_margin.svg)](assets/new_margin.svg)
+  <figcaption>Drumlins near the ice limit are stubbier than their field average; the effect fades beyond about 60 km. Values are the pooled bin means from the Stage 2 chart.</figcaption>
+</figure>
+
+### A direct test of the instability theory's speed prediction
+
+The theory predicts how drumlin shape should change with ice speed. We measured that change in the field and found it goes the other way.
+
+<figure markdown="span">
+  [![The theory says faster ice makes bigger but stubbier drumlins. In three fields, converging (faster) flow made them longer instead.](assets/new_speed.svg)](assets/new_speed.svg)
+  <figcaption>The theory says faster ice makes bigger but stubbier drumlins. In three fields, converging (faster) flow made them longer instead.</figcaption>
+</figure>
+
+### Cumulative slip tested beyond one field
+
+[Zoet et al. (2021)](https://onlinelibrary.wiley.com/doi/10.1002/esp.5192) linked elongation to cumulative slip under the Green Bay Lobe. We reproduce their result there, and find it holds pooled across fields but with a different strength in each.
+
+<figure markdown="span">
+  [![Per-field slopes of elongation on cumulative slip. Pooled, the link is positive, but individual fields range from strongly negative to positive.](assets/new_slip.svg)](assets/new_slip.svg)
+  <figcaption>Per-field slopes of elongation on cumulative slip. Pooled, the link is positive, but individual fields range from strongly negative to positive.</figcaption>
+</figure>
+
+### Width is nearly fixed; length does the varying
+
+Across fields, median width changes by a factor of 1.8 and median length by 2.2, and elongation follows length.
+
+<figure markdown="span">
+  [![Median drumlin shape in each of the 16 fields, to scale. Widths cluster; lengths spread out.](assets/new_width.svg)](assets/new_width.svg)
+  <figcaption>Median drumlin shape in each of the 16 fields, to scale. Widths cluster; lengths spread out.</figcaption>
+</figure>
+
 
 ## Where this meets existing theory
 
