@@ -25,3 +25,7 @@ Every push to `main` rebuilds the site through GitHub Actions (`.github/workflow
 ## Credits
 
 Research by James, with Anthropic's Claude Opus doing the analysis. Claude Opus, Claude Sonnet and Claude Haiku were used alongside James as drumlin labellers.
+
+## License
+
+MIT (see `LICENSE`). Third-party data sources keep their own terms; see the Sources page.
