@@ -59,7 +59,7 @@ button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid 
 <main>
   <header>
     <h1>Drumlin Field Simulator</h1>
-    <p>Ice flows from the top of the map to the bottom over a soft, water-saturated till bed. Small random bumps in the bed grow or decay according to the Fowler &amp; Chapwanya (2014) instability theory. The sliders change the ice and the bed, and the field regrows as you drag.</p>
+    <p>Ice flows across the map, in whatever direction you set, over a soft, water-saturated till bed. Small random bumps in the bed grow or decay according to the Fowler &amp; Chapwanya (2014) instability theory. The sliders change the ice and the bed, and the field regrows as you drag.</p>
   </header>
 
   <div class="app">
@@ -69,7 +69,7 @@ button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid 
         <canvas id="ice" aria-hidden="true"></canvas>
       </div>
       <div class="maprow">
-        <span><span class="flowtag">↓ ice flow</span> · light from the northwest · relief exaggerated</span>
+        <span><span class="flowtag"><span id="flowarrow" style="display:inline-block;transition:transform .1s">↓</span> ice flow</span> · light from the northwest · relief exaggerated</span>
         <span id="scalebar"></span>
       </div>
       <div class="stats">
@@ -98,6 +98,11 @@ button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid 
         <small>The model's effective-pressure parameter. Low Π gives broad ribs across the flow. High Π gives long, narrow streamlined hills.</small>
       </div>
       <label class="check" for="link"><input id="link" type="checkbox" checked> <span>Let speed change Π, as the theory does (Π ∝ speed<sup>−½</sup>)</span></label>
+      <div class="ctl">
+        <label for="dir">Ice flow direction <output id="diro"></output></label>
+        <input id="dir" type="range" min="0" max="359" step="1" value="180">
+        <small>Compass direction the ice flows toward. The hills line up with it. As the ice sheet melts back, its margin retreats the opposite way, back up the flow line.</small>
+      </div>
 
       <h2>Growth and shape</h2>
       <div class="ctl">
@@ -190,7 +195,7 @@ const GROW={k1:[0.02, 0.02239, 0.02506, 0.02805, 0.0314, 0.03515, 0.03934, 0.044
   }
   // ---- state and controls
   const $ = id => document.getElementById(id);
-  const ctl = { u: $("u"), eta: $("eta"), pi: $("pi"), t: $("t"), iso: $("iso"), relief: $("relief"), size: $("size"), link: $("link"), showice: $("showice") };
+  const ctl = { dir: $("dir"), u: $("u"), eta: $("eta"), pi: $("pi"), t: $("t"), iso: $("iso"), relief: $("relief"), size: $("size"), link: $("link"), showice: $("showice") };
   const uOf = x => 20 * Math.pow(50, x), etaOf = x => 1e13 * Math.pow(30, x), piOf = x => Math.pow(20, x);
   const fmt = (m) => m >= 1000 ? (m / 1000).toFixed(m >= 10000 ? 0 : 1) + " km" : Math.round(m) + " m";
   let Z = new Float32Array(N * N), state = {};
@@ -198,7 +203,8 @@ const GROW={k1:[0.02, 0.02239, 0.02506, 0.02805, 0.0314, 0.03515, 0.03934, 0.044
     const u = uOf(+ctl.u.value), eta = etaOf(+ctl.eta.value), pi100 = piOf(+ctl.pi.value);
     const Pi = ctl.link.checked ? Math.min(Math.max(pi100 * Math.pow(u / 100, -0.5), 1), 20) : pi100;
     const lD = Math.sqrt(eta * (u / YR) / (DRHO * G0));
-    return { u, eta, pi100, Pi, lD, T: +ctl.t.value, iso: +ctl.iso.value, relief: +ctl.relief.value, Dm: +ctl.size.value };
+    const beta = +ctl.dir.value * Math.PI / 180;
+    return { beta, fx: Math.sin(beta), fy: -Math.cos(beta), u, eta, pi100, Pi, lD, T: +ctl.t.value, iso: +ctl.iso.value, relief: +ctl.relief.value, Dm: +ctl.size.value };
   }
   function labels(p) {
     $("uo").textContent = Math.round(p.u) + " m/yr";
@@ -207,6 +213,9 @@ const GROW={k1:[0.02, 0.02239, 0.02506, 0.02805, 0.0314, 0.03515, 0.03934, 0.044
     $("to").textContent = p.T.toFixed(1);
     $("isoo").textContent = Math.round(p.iso * 100) + "%";
     $("reliefo").textContent = p.relief + " m";
+    const deg = Math.round(p.beta * 180 / Math.PI), pts = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"];
+    $("diro").textContent = "toward " + deg + "° (" + pts[Math.round(deg / 22.5) % 16] + ")";
+    $("flowarrow").style.transform = "rotate(" + (deg - 180) + "deg)";
   }
   function compute() {
     const p = params(); labels(p); state = p;
@@ -223,7 +232,7 @@ const GROW={k1:[0.02, 0.02239, 0.02506, 0.02805, 0.0314, 0.03515, 0.03934, 0.044
       for (let c = 0; c < N; c++) {
         const fx = c <= N / 2 ? c : c - N, kx = 2 * Math.PI * fx / p.Dm, idx = r * N + c;
         if (r === 0 && c === 0) { re[idx] = im[idx] = 0; continue; }
-        const g = lookup(Tb, Math.abs(ky) * p.lD, Math.abs(kx) * p.lD);
+        const g = lookup(Tb, Math.abs(kx * p.fx + ky * p.fy) * p.lD, Math.abs(kx * p.fy - ky * p.fx) * p.lD);   // along-flow and across-flow wavenumbers
         const kk = (kx * kx + ky * ky) * dx * dx, damp = Math.exp(-0.6 * kk) / (1 + 0.15 * kk * N);   // resolution limit + reddened start
         const m = Math.exp(Math.min(scale * g, 40)) * damp;
         re[idx] = base0r[idx] * m; im[idx] = base0i[idx] * m;
@@ -270,7 +279,8 @@ const GROW={k1:[0.02, 0.02239, 0.02506, 0.02805, 0.0314, 0.03515, 0.03934, 0.044
       if (edge || n < 5) continue;
       const mx = sx / n, my = sy / n, vx = sxx / n - mx * mx, vy = syy / n - my * my, cv = sxy / n - mx * my;
       const tr = vx + vy, det = vx * vy - cv * cv, l1 = tr / 2 + Math.sqrt(Math.max(tr * tr / 4 - det, 0)), l2 = Math.max(tr / 2 - Math.sqrt(Math.max(tr * tr / 4 - det, 0)), 0.08);
-      Lm.push(4 * Math.sqrt(Math.max(vy, 0.08)) * dx); Wm.push(4 * Math.sqrt(Math.max(vx, 0.08)) * dx);   // along-flow (y) and across-flow (x) extents
+      const va = p.fx * p.fx * vx + p.fy * p.fy * vy + 2 * p.fx * p.fy * cv, vc = p.fy * p.fy * vx + p.fx * p.fx * vy - 2 * p.fx * p.fy * cv;
+      Lm.push(4 * Math.sqrt(Math.max(va, 0.08)) * dx); Wm.push(4 * Math.sqrt(Math.max(vc, 0.08)) * dx);   // along-flow and across-flow extents
     }
     const med = a => { if (!a.length) return NaN; const b = a.slice().sort((x, y) => x - y); return b[(b.length / 2) | 0]; };
     const E = Lm.map((l, i) => l / Wm[i]);
@@ -285,7 +295,7 @@ const GROW={k1:[0.02, 0.02239, 0.02506, 0.02805, 0.0314, 0.03515, 0.03934, 0.044
   // ---- flowing ice overlay
   const icv = $("ice"), ictx = icv.getContext("2d"); let parts = [], last = 0;
   const reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  function sizeIce() { const r = icv.getBoundingClientRect(), d = window.devicePixelRatio || 1; icv.width = Math.round(r.width * d); icv.height = Math.round(r.height * d); parts = []; for (let i = 0; i < 150; i++) parts.push([Math.random(), Math.random(), Math.random()]); }
+  function sizeIce() { const r = icv.getBoundingClientRect(), d = window.devicePixelRatio || 1; icv.width = Math.round(r.width * d); icv.height = Math.round(r.height * d); parts = []; for (let i = 0; i < 220; i++) parts.push([Math.random(), Math.random(), Math.random()]); }
   function tick(ts) {
     const dt = Math.min((ts - last) / 1000, 0.05); last = ts;
     const W = icv.width, H = icv.height; ictx.clearRect(0, 0, W, H);
@@ -293,13 +303,20 @@ const GROW={k1:[0.02, 0.02239, 0.02506, 0.02805, 0.0314, 0.03515, 0.03934, 0.044
       ictx.fillStyle = "rgba(215,235,250,0.12)"; ictx.fillRect(0, 0, W, H);
       const spd = reduce ? 0 : 0.03 + 0.05 * Math.log10(state.u || 100), dx = 1 / N;
       ictx.strokeStyle = "rgba(240,250,255,0.38)"; ictx.lineWidth = Math.max(1, W / 420); ictx.beginPath();
+      const fx = state.fx ?? 0, fy = state.fy ?? 1, qx = -fy, qy = fx;
       for (const pt of parts) {
-        const c = Math.min(N - 2, Math.max(1, (pt[0] * N) | 0)), r = Math.min(N - 2, Math.max(1, (pt[1] * N) | 0)), i = r * N + c;
-        const gx = (Z[i + 1] - Z[i - 1]) / (state.relief || 1);
-        const vx = -gx * 0.4 * spd, vy = spd * (0.6 + 0.4 * pt[2]);
+        const inside = pt[0] >= 0 && pt[0] <= 1 && pt[1] >= 0 && pt[1] <= 1;
+        let vx = spd * (0.6 + 0.4 * pt[2]) * fx, vy = spd * (0.6 + 0.4 * pt[2]) * fy;
+        if (inside) {
+          const c = Math.min(N - 2, Math.max(1, (pt[0] * N) | 0)), r = Math.min(N - 2, Math.max(1, (pt[1] * N) | 0)), i = r * N + c;
+          const gx = (Z[i + 1] - Z[i - 1]) / (state.relief || 1), gy = (Z[i + N] - Z[i - N]) / (state.relief || 1);
+          const d = -(gx * qx + gy * qy) * 0.4 * spd; vx += d * qx; vy += d * qy;
+        }
         const x0 = pt[0] * W, y0 = pt[1] * H; pt[0] += vx * dt; pt[1] += vy * dt;
-        if (pt[1] > 1 || pt[0] < 0 || pt[0] > 1) { pt[0] = Math.random(); pt[1] = 0; }
-        const len = 5 + 9 * pt[2]; ictx.moveTo(x0, y0); ictx.lineTo(x0 - vx / spd * len * 0.3, y0 - len * (W / 600));
+        if ((pt[0] - 0.5) * fx + (pt[1] - 0.5) * fy > 0.75) { const t = Math.random() - 0.5; pt[0] = 0.5 - 0.72 * fx + 1.5 * t * qx; pt[1] = 0.5 - 0.72 * fy + 1.5 * t * qy; continue; }
+        if (!inside) continue;
+        const vm = Math.hypot(vx, vy) || 1, len = (5 + 9 * pt[2]) * (W / 600);
+        ictx.moveTo(x0, y0); ictx.lineTo(x0 - vx / vm * len, y0 - vy / vm * len);
       }
       ictx.stroke();
     }
@@ -307,7 +324,7 @@ const GROW={k1:[0.02, 0.02239, 0.02506, 0.02805, 0.0314, 0.03515, 0.03934, 0.044
   }
   // ---- wiring
   let pending = false; function schedule() { if (!pending) { pending = true; requestAnimationFrame(() => { pending = false; compute(); }); } }
-  ["u", "eta", "pi", "t", "iso", "relief"].forEach(k => ctl[k].addEventListener("input", schedule));
+  ["dir", "u", "eta", "pi", "t", "iso", "relief"].forEach(k => ctl[k].addEventListener("input", schedule));
   ctl.size.addEventListener("change", schedule); ctl.link.addEventListener("change", schedule);
   $("seed").addEventListener("click", () => { seed = (Math.random() * 1e9) | 0; newBase(); schedule(); });
   let playing = null;

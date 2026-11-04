@@ -5,7 +5,7 @@ hide:
 
 # Simulator
 
-An interactive toy of the bed instability. Drag the sliders for ice speed, ice viscosity, till–water coupling (Π) and growth time, and watch a field of bumps grow into ribs or streamlined drumlins.
+An interactive toy of the bed instability. Drag the sliders for ice flow direction, ice speed, ice viscosity, till–water coupling (Π) and growth time, and watch a field of bumps grow into ribs or streamlined drumlins.
 
 <iframe id="sim-frame" src="../sim/index.html" title="Drumlin field simulator" loading="lazy" style="width:100%;height:1250px;border:0;border-radius:8px;"></iframe>
 
