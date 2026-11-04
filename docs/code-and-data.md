@@ -13,6 +13,7 @@ Everything needed to check the numbers is in the [repository](https://github.com
 | `data/results_v2/field_medians_compare.csv` | Field medians under the old and new selections |
 | `data/results_v2/training_labels_cv.csv` | The 1,385 training labels with cross-validated scores from the original, shape-light and shape-blind classifiers |
 | `data/results_v2/margin_bins.csv` | The margin chart values |
+| `data/results_v2/validation_*_britice.csv` | Every candidate in the Vale of Eden and Cavan–Monaghan with its match to BRITICE hand-mapped drumlins (`hid`) and ribbed moraine (`rib`) |
 | `data/soils/soil_*.csv` | SSURGO till clay, sand and rock-fragment content at each drumlin (US fields) |
 | `data/mulajokull/` | Múlajökull drumlins (4 m ArcticDEM) and their surge-moraine zones |
 | `data/labels/` | Human labels for the New York training rounds, plus Claude Opus, Claude Sonnet and Claude Haiku labels |

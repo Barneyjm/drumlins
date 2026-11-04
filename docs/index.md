@@ -99,6 +99,7 @@ Where ice flow converged, which usually means faster ice, drumlins are longer. T
 - **Who did this.** I'm not a geologist and have no training in glacial geomorphology. The analysis was done with Claude Opus. Drumlin labels came from me and from Claude Opus, Claude Sonnet and Claude Haiku, not from trained mappers, so "precision" means agreement with non-expert labels.
 - **Not peer-reviewed.** An AI reviewer acting as a geomorphologist found the problems listed below; no human geologist has checked the work.
 - **Detection errors.** Precision is 54–82% per field. Within 20 km of an ice limit it falls to about 40%, because moraine hummocks and kames are common there, and these false positives are stubby. The margin gradient also holds among hand-checked drumlins, but on fewer cases (234).
+- **Only the big drumlins.** Compared with expert hand maps in two fields, we find only 7–10% of mapped drumlins, mostly the larger ones. Our outlines are about 22% shorter than an expert's for the same hill. Results describe the larger drumlins in each field.
 - **Remaining shape bias.** The labels themselves may favour classic elongated hills, and the corrected classifier still keeps hills about 11% more elongated than the average confirmed drumlin.
 - **Coarse inputs.** Copernicus 30 m elevation outside the US is a surface model that includes trees and buildings. Ice-margin reconstructions are generalised, and their uncertainty is similar in size to the nearest distance band. Soil data come from map units, not boreholes.
 - **Choices made after looking.** The 60 km break and the "cold-margin" grouping were chosen after seeing the data. Treat their exact values as provisional.
@@ -112,3 +113,4 @@ The first version (November 3) made claims the data do not support. A review on 
 - **Withdrawn:** "width is nearly fixed while length varies"; cumulative slip as independent evidence; the claim that Fowler & Chapwanya predict stubbier drumlins under faster ice; "high confidence" for the margin gradient.
 - **Strengthened:** the margin gradient (+0.16 to +0.24 pooled) and convergence (New York +0.92 to +1.20) under the corrected selection.
 - **Corrected:** background facts on drumlin height and shape, and the literature now credited.
+- **Validated against expert maps** (BRITICE, Vale of Eden and Cavan–Monaghan): precision agrees with our blind checks, but recall is low and biased toward large drumlins (see [Data and methods](methods.md#validation-against-expert-maps)).

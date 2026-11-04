@@ -29,6 +29,10 @@
 
 - [Wisconsin Geological and Natural History Survey, Glacial landscapes of the southern Green Bay Lobe](https://data.wgnhs.wisc.edu/pubshare/WOFR2019-02.pdf)
 
+## Hand-mapped landforms
+
+- [Clark et al. (2018), BRITICE Glacial Map, version 2](https://onlinelibrary.wiley.com/doi/10.1111/bor.12273), Boreas 47: 11; data from the [University of Sheffield BRITICE feature services](https://shefuni.maps.arcgis.com/apps/webappviewer/index.html?id=fd78b03a74bb477c906c5d4e0ba9abaf)
+
 ## Ice-margin reconstructions
 
 - [NADI-1, North American Deglacial Isochrones (Dalton et al. 2023), Zenodo](https://zenodo.org/records/8161764)

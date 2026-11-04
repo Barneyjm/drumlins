@@ -40,6 +40,25 @@ Each field got 48 blind cards: 36 hills the first classifier accepted and 12 it 
 
 Precision is 54–82% per field. It is much lower near ice limits: about 38% within 20 km, 72% at 20–60 km and 88% beyond 60 km.
 
+## Validation against expert maps
+
+Two fields overlap the BRITICE v2 database of hand-mapped glacial landforms ([Clark et al., 2018](https://onlinelibrary.wiley.com/doi/10.1111/bor.12273)). In the Vale of Eden, BRITICE has drumlin outlines compiled from Hughes et al. (2010), Livingstone et al. (2008) and Mitchell & Riley (2006). In Cavan–Monaghan it has drumlin crest lines and ribbed-moraine outlines. The comparison only covers 2 km cells where mappers recorded drumlins.
+
+| | Vale of Eden | Cavan–Monaghan |
+| --- | --- | --- |
+| Our accepted hills that match a mapped drumlin | 72% (340 of 472) | 85% (915 of 1,076) |
+| Mapped drumlins we accept (recall) | 7% of 4,336 | 10% of 8,663 |
+| Our accepted hills inside mapped ribbed moraine | 1% | 67% |
+
+What this shows:
+
+- **Precision holds up.** Agreement with expert maps (72% and 85%) is close to our blind-card estimates (79% and 81%). The hills that match no mapped drumlin have the same median elongation as those that do, so the false positives here do not skew shape.
+- **We find only the big drumlins.** Recall is about 7–10%. It rises with size: 22% of mapped drumlins longer than 1.2 km are found in the Vale of Eden, none shorter than 300 m. The ones we find are more elongated than the ones we miss (hand-measured E 2.99 against 2.48). Our results describe the larger, higher-relief drumlins in each field, not the whole population.
+- **Our outlines are short.** For 311 drumlins in both maps, our outlines (trimmed at half height) give a median length of 620 m against 825 m for the hand outlines, with similar widths. So our elongation is about 22% lower than an expert's for the same hill. Rank agreement is only 0.34 for elongation. That noise weakens real relationships rather than creating false ones, but absolute elongation values are not comparable with hand-mapped studies.
+- **Cavan–Monaghan is partly ribbed moraine.** Two-thirds of our accepted hills there also lie inside mapped ribbed moraine. Many are drumlinised ribs, which may explain why it has the lowest elongation of any field.
+
+Neither field lies near an ice limit, so this does not test the low precision near margins. That needs a hand map from a near-margin field such as the Green Bay Lobe (see [Open questions](open-questions.md)).
+
 ## Ice history
 
 - **North America:** NADI-1, in 0.5 ka slices.

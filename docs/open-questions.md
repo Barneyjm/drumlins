@@ -2,7 +2,11 @@
 
 ## Validate against expert maps
 
-About 14,000 drumlins in the southern Green Bay Lobe have been hand-mapped from lidar (Barrette et al., 2017, described in [WGNHS 2019](https://data.wgnhs.wisc.edu/pubshare/WOFR2019-02.pdf)). Comparing our detections with that map would give real precision and recall by distance from the margin. That is the most important missing check.
+About 14,000 drumlins in the southern Green Bay Lobe have been hand-mapped from lidar (Barrette et al., 2017, described in [WGNHS 2019](https://data.wgnhs.wisc.edu/pubshare/WOFR2019-02.pdf)). Comparing our detections with that map would give real precision and recall by distance from the margin. That is the most important missing check: the BRITICE comparison (see [Data and methods](methods.md#validation-against-expert-maps)) confirmed our precision far from margins but cannot test near them. The Green Bay inventory does not appear to be public, so it would have to be requested from the authors. A Patagonian map ([Darvill et al., 2014](https://durham-repository.worktribe.com/output/1468686/a-glacial-geomorphological-map-of-the-southernmost-ice-lobes-of-patagonia-the-bahia-inutil-san-sebastian-magellan-otway-skyring-and-bella-vista-lobes)) covers the Magellan–Otway field.
+
+## Find smaller drumlins
+
+We recover only 7–10% of hand-mapped drumlins, mostly the large ones. Running the detector on 1–2 m lidar without resampling to 20 m would test whether the within-field patterns hold for the whole population.
 
 ## Separate time from speed
 

@@ -26,6 +26,7 @@ Fifteen fields passed quality control with the corrected classifier (one cutoff,
     - A dagger (†) marks cross-validation on the training labels.
     - All labels come from non-experts (James and Claude models).
 - **Distance** is the field's median distance inside the maximum ice limit.
+- **Cavan–Monaghan:** two-thirds of accepted hills also lie inside ribbed moraine mapped by BRITICE, so this field mixes drumlins and drumlinised ribs.
 - **Múlajökull** (88 drumlins, 4 m ArcticDEM) was analysed separately.
 
 ## Excluded
