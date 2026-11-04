@@ -1,17 +1,38 @@
 # Open questions and next tests
 
-The biggest gap is what sets each field's baseline elongation. Nothing tested so far explains it.
+## Validate against expert maps
 
-1.  **Field baselines.** Candidates our data cannot see are till thickness, the rock under the till, subglacial drainage, and ice thickness and stiffness. A test needs borehole logs, well records or geophysical surveys across 20+ fields.
+About 14,000 drumlins in the southern Green Bay Lobe have been hand-mapped from lidar (Barrette et al., 2017, described in [WGNHS 2019](https://data.wgnhs.wisc.edu/pubshare/WOFR2019-02.pdf)). Comparing our detections with that map would give real precision and recall by distance from the margin. That is the most important missing check.
 
-2.  **Readvance step.** Drumlins just inside and just outside a readvance limit separate time under ice from distance. That needs a readvance zone where drumlins survived; Fox Valley, Killard Point and Loch Lomond did not qualify.
+## Separate time from speed
 
-3.  **Proper slip estimates.** Repeat Zoet et al.'s flowline method in New York, Puget and Pierz. Then retest whether one cumulative-slip coefficient holds across fields.
+Near margins, time under ice, distance and ice speed all change together. The cleanest separation is a readvance zone where drumlins survived on both sides of the readvance limit. Fox Valley, Killard Point and Loch Lomond did not qualify.
 
-4.  **The 45–100 km overshoot.** Drumlins there run 7–8% above field average. More fields with drumlins at those distances would show whether it is real.
+## Proper slip estimates
 
-5.  **Width versus the instability scale.** If width is fixed near W\*, field-median width should scale with l<sub>D</sub>. That needs independent estimates of ice viscosity and sliding speed per field.
+Repeat the flowline slip reconstruction of Zoet et al. (2021) in New York, Puget and Pierz. Then test whether slip predicts elongation beyond distance.
 
-6.  **Múlajökull with dated limits.** Digitise the thesis surge limits (1954–2008) and compare each drumlin's quiet-flow exposure with its shape.
+## Flow from independent indicators
 
-7.  **Detection quality.** Relabel the weaker fields (Chippewa 0.67, Langlade 0.69, Menominee 0.70) to firm up their medians.
+Use striations, eskers or NADI-1 flowlines instead of drumlin orientations. That would remove any remaining circularity from the convergence test.
+
+## Field baselines
+
+Nothing tested explains why some fields have more elongated drumlins than others. Candidates our data cannot see include:
+
+- till thickness;
+- the rock under the till;
+- subglacial drainage;
+- ice thickness and stiffness.
+
+## Pre-registered tests
+
+The 60 km break and the cold-margin grouping were chosen after looking. Future fields should be tested with those choices fixed in advance.
+
+## Rerun the older tests
+
+The spacing, till-texture tiles and shallow-ice model figures still use the first classifier. They need rerunning on the corrected selection.
+
+## Múlajökull with dated limits
+
+Digitise the thesis surge limits (1954–2008), then compare each drumlin's quiet-flow exposure with its shape.

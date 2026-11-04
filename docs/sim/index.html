@@ -53,11 +53,23 @@ button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid 
 .notes p{margin:6px 0;max-width:72ch;color:var(--muted)}
 .notes code{font-family:var(--mono);font-size:13px;color:var(--ink)}
 .flowtag{font:500 12px var(--mono);color:var(--till)}
+.back{display:inline-block;margin-bottom:8px;font-size:14px;color:var(--accent);text-decoration:none}
+.embedded .back{display:none}
+@media (pointer:coarse){input[type=range]{height:32px} button,select{min-height:44px;padding:10px 14px}}
+@media (max-width:860px){
+  .embedded .mapcard{position:sticky;top:0;z-index:5;box-shadow:0 6px 14px rgba(0,0,0,.18)}
+  .embedded .mapwrap{max-width:min(100%,42vh);margin:0 auto}
+  .embedded .stats .s{display:none}
+  .embedded header p{display:none}
+}
 </style>
 </head>
 <body>
+<script>if (window.self !== window.top) document.documentElement.classList.add("embedded");
+window.addEventListener("message", function (e) { if (e.data && e.data.theme) document.documentElement.dataset.theme = e.data.theme; });</script>
 <main>
   <header>
+    <a class="back" href="../" target="_top">← Back to the study</a>
     <h1>Drumlin Field Simulator</h1>
     <p>Ice flows across the map, in whatever direction you set, over a soft, water-saturated till bed. Small random bumps in the bed grow or decay according to the Fowler &amp; Chapwanya (2014) instability theory. The sliders change the ice and the bed, and the field regrows as you drag.</p>
   </header>

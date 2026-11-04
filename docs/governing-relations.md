@@ -1,33 +1,41 @@
-# Governing relations
+# Equations
 
-The working description has a theoretical size scale and an empirical within-field growth law; the coefficients below are fitted, not derived.
+The working description has a theoretical size scale and an empirical within-field relation. The coefficients below are fitted, not derived, and differ between fields.
 
-**Size scale (theory).**
+## Size scale (theory)
 
 $$
 l_D = \sqrt{\frac{\eta \, u}{\Delta\rho \, g}}, \qquad L^* \approx (1\text{–}2)\, l_D, \qquad W^* \approx (0.3\text{–}1)\, l_D
 $$
 
-**Within-field elongation (empirical).** E is elongation, C is upstream flow convergence over 10–20 km (dimensionless), d is distance inside the ice limit in km, τ is time under ice in thousands of years, and S is cumulative slip.
+Observed drumlins imply l<sub>D</sub> ≈ 400–450 m, inside the theory's wide range. This is a consistency check, not a strong test.
+
+## Within-field elongation (empirical)
+
+The terms are:
+
+- E is elongation (length ÷ width);
+- C is upstream flow convergence over 10 km (dimensionless);
+- d is distance inside the maximum ice limit, in km;
+- τ is time under ice, in thousands of years.
 
 $$
 \ln E = \ln E_{\text{field}} + a\,C + b \ln d + c\,\tau
 $$
 
-| Term               | Coefficient                              | Range of validity                                       |
-|--------------------|------------------------------------------|---------------------------------------------------------|
-| a, convergence     | +0.4 to +0.9                             | New York, Green Bay, Puget (margin distance controlled) |
-| b, margin distance | +0.16 ± 0.02 (+0.21 ± 0.03 cold margins) | d &lt; 60 km; ≈ 0 beyond                                  |
-| c, time under ice  | +0.13 per ka                             | d &lt; 60 km, fitted with b (b falls to +0.10)            |
+| Term | Coefficient | Where it holds |
+| --- | --- | --- |
+| a, convergence | +0.5 to +1.2 | New York, Green Bay, Puget (distance controlled) |
+| b, margin distance | +0.28 ± 0.11 (separate slope per field); +0.37 ± 0.12 cold margins | d &lt; 60 km; reverses beyond |
+| c, time under ice | +0.12 per ka, fitted with b (b falls to +0.18) | d &lt; 60 km, US fields |
 
-Cumulative slip can replace distance and time together. It explains the margin effect fully:
+d and τ are correlated (r = 0.51), so b and c are not cleanly separable.
 
-$$
-\ln E = \ln E_{\text{field}} + 0.21 \ln S, \qquad \ln L = \ln L_{\text{field}} + 0.26 \ln S, \qquad \ln W \approx \ln W_{\text{field}}
-$$
+## What the relations leave out
 
-**Till texture (size only).** Per 10% sand, ln L and ln W each rise by 0.02–0.05; ln E does not change.
-
-**New York unified law (one field).** L = L0 (u/u0)^α λ(till), W = W0 λ(till), with α = 0.49–0.75, L0 ≈ 690 m and W0 ≈ 228 m. It did not transfer to Green Bay or Puget.
-
-**What the relations leave out.** The field baseline E_field is not predicted by anything tested. Each term explains about 1% of the variance between individual drumlins.
+- **The field baseline.** E<sub>field</sub> is not predicted by anything tested.
+- **Most of the variation.** Each term explains only about 1–2% of the variance between individual drumlins.
+- **Earlier relations, withdrawn:**
+    - a cumulative-slip law, which only re-expressed distance;
+    - "ln W ≈ constant", which was a selection artefact;
+    - a New York speed law, which did not transfer to other fields.

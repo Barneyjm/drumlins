@@ -1,121 +1,114 @@
-# How Drumlins Form: Evidence from 16 Fields
+---
+description: An amateur, open-data study of drumlin shape across 15 fields. Within a field, drumlins are stubbier near the old ice edge and longer where ice flow converged.
+---
 
-*James · November 2026*
+# How Drumlins Form: Evidence from 15 Fields
 
-!!! warning "Read this first: an amateur study"
-    I'm not a geologist. This is an independent project done with an AI model (Anthropic's Claude Opus) doing most of the analysis, and it has not been peer-reviewed. Treat it as a careful exploration with open data and code, not as an established result. See [Caveats](#caveats) below for the specific limits, and please [open an issue](https://github.com/Barneyjm/drumlins/issues) if you spot a mistake.
+*By James ([Barneyjm](https://github.com/Barneyjm) on GitHub) · November 2026 · revised after review*
+
+**In short:** inside a single drumlin field, drumlins close to the old ice edge are stubbier, and drumlins where the ice flow converged are longer. Both patterns fit the idea that drumlins keep lengthening the more, or the faster, ice slides over them. A bed instability seems to set their starting size. Across 15 fields on three continents these within-field patterns hold up, but the differences *between* fields remain unexplained.
+
+[Try the simulator](simulator.md){ .md-button .md-button--primary } [Get the data and code](code-and-data.md){ .md-button }
+
+!!! warning "Amateur study, not peer-reviewed"
+    I'm not a geologist, and most of the analysis was done with Anthropic's Claude Opus. An independent review found real problems. This version fixes them or flags them; see [Caveats](#caveats) and [What changed after review](#what-changed-after-review).
 
 ## What drumlins are and why they matter
 
-A drumlin is a streamlined hill shaped by an ice sheet flowing over its bed: blunt and steep on the end that faced the oncoming ice, tapering toward the end the ice flowed off. Typical drumlins are a few hundred metres to a kilometre or so long, a few hundred metres wide and tens of metres high. They rarely occur alone; they come in fields of hundreds to thousands, often described as a "basket of eggs" landscape. The name comes from the Irish *droimnín*, "little ridge". Large fields cover parts of New York, Wisconsin, Minnesota, Michigan, Canada, Ireland and Britain, all left by ice sheets that melted away at the end of the last ice age.
+A drumlin is a streamlined hill shaped by an ice sheet flowing over its bed, with its long axis along the ice flow. Textbooks draw it blunt at the up-ice end and tapering down-ice. Large surveys find most drumlins are closer to symmetrical bumps ([Spagnolo et al., 2011](https://research.manchester.ac.uk/en/publications/the-topography-of-drumlins-assessing-their-long-profile-shape)). Most are 250–1,000 m long and 120–300 m wide ([Clark et al., 2009](https://www.sciencedirect.com/science/article/abs/pii/S0277379108002540)). They are usually only a few metres high; the average in Britain is about 7 m ([Spagnolo et al., 2012](https://www.sciencedirect.com/science/article/pii/S0169555X12001055)). They come in fields of hundreds to thousands, often called a "basket of eggs" landscape. The name comes from the Irish *droimnín*, "little ridge". Large fields cover parts of New York, Wisconsin, Minnesota, Michigan, Canada, Ireland and Britain. Most were left by ice sheets of the last glaciation, and drumlins are still forming today under some glaciers, such as Múlajökull in Iceland.
 
 <figure markdown="span">
-  ![Hillshade of drumlins in the Central New York field](assets/ny_hillshade.jpg)
-  <figcaption>About 7 × 5 km of the Central New York drumlin field, near the north end of Canandaigua Lake (USGS 3DEP 10 m elevation, lit from the northwest). Ice flowed roughly north-northeast to south-southwest, along the long axes of the hills; each hill is a drumlin.</figcaption>
+  ![Shaded relief of a dense patch of drumlins](assets/ny_hillshade.jpg)
+  <figcaption>About 7 × 5 km of the Central New York drumlin field, near the north end of Canandaigua Lake (USGS 3DEP 10 m elevation, lit from the northwest, relief exaggerated). Ice flowed roughly north-northeast to south-southwest, along the long axes of the hills.</figcaption>
 </figure>
 
 **Why they matter.**
 
 - **They record how ice sheets moved.** Drumlins line up with the flow, so geologists use them to map where vanished ice sheets went and how their flow changed as they retreated.
-- **They are a window on the ice-sheet bed.** How fast an ice sheet slides depends on what happens where ice meets soft, wet sediment, and that is one of the least certain parts of forecasting how fast Antarctica and Greenland lose ice to the sea. The bed of a living ice sheet is almost impossible to observe; old drumlin fields are its exposed floor, with tens of thousands of examples.
-- **How they form is still unsolved.** Geologists have argued about it since the 1800s. Drumlins can be made of till, gravel or bedrock, so their contents alone do not settle it. Theories range from ice moulding soft sediment to meltwater floods to a bed instability, like ripples in sand, that grows bumps of a preferred size.
-
-This study tests that last idea, and what happens after the bumps form, against drumlin shapes measured across 16 fields on three continents.
-
-## What's new here
-
-As far as we can tell from the literature we read, these parts are new. Our reading was not exhaustive, so some of them may already exist.
-
-### One method across many fields
-
-Large drumlin inventories are usually mapped region by region by hand, for example the roughly 59,000 drumlins of Britain and Ireland in [Clark et al. (2009)](https://www.sciencedirect.com/science/article/abs/pii/S0277379108002540). Here a single automated detector and classifier, checked blind in each field, was run over 16 fields in North America, Britain, Ireland and Patagonia. That lets shape be compared between fields without differences in mapping style.
-
-<figure markdown="span">
-  [![The same pipeline runs in every field, so shapes can be compared directly.](assets/new_method.svg)](assets/new_method.svg)
-  <figcaption>The same pipeline runs in every field, so shapes can be compared directly.</figcaption>
-</figure>
-
-### A within-field margin gradient across several ice sheets
-
-Drumlins get stubbier toward the maximum ice limit, out to about 60 km. It shows up in every cold-margin field near a dated ice limit (Green Bay, Langlade, Pierz in the Laurentide; Magellan–Otway in Patagonia), and again at a modern Icelandic surge glacier.
-
-<figure markdown="span">
-  [![Drumlins near the ice limit are stubbier than their field average; the effect fades beyond about 60 km. Values are the pooled bin means from the Stage 2 chart.](assets/new_margin.svg)](assets/new_margin.svg)
-  <figcaption>Drumlins near the ice limit are stubbier than their field average; the effect fades beyond about 60 km. Values are the pooled bin means from the Stage 2 chart.</figcaption>
-</figure>
-
-### A direct test of the instability theory's speed prediction
-
-The theory predicts how drumlin shape should change with ice speed. We measured that change in the field and found it goes the other way.
-
-<figure markdown="span">
-  [![The theory says faster ice makes bigger but stubbier drumlins. In three fields, converging (faster) flow made them longer instead.](assets/new_speed.svg)](assets/new_speed.svg)
-  <figcaption>The theory says faster ice makes bigger but stubbier drumlins. In three fields, converging (faster) flow made them longer instead.</figcaption>
-</figure>
-
-### Cumulative slip tested beyond one field
-
-[Zoet et al. (2021)](https://onlinelibrary.wiley.com/doi/10.1002/esp.5192) linked elongation to cumulative slip under the Green Bay Lobe. We reproduce their result there, and find it holds pooled across fields but with a different strength in each.
-
-<figure markdown="span">
-  [![Per-field slopes of elongation on cumulative slip. Pooled, the link is positive, but individual fields range from strongly negative to positive.](assets/new_slip.svg)](assets/new_slip.svg)
-  <figcaption>Per-field slopes of elongation on cumulative slip. Pooled, the link is positive, but individual fields range from strongly negative to positive.</figcaption>
-</figure>
-
-### Width is nearly fixed; length does the varying
-
-Across fields, median width changes by a factor of 1.8 and median length by 2.2, and elongation follows length.
-
-<figure markdown="span">
-  [![Median drumlin shape in each of the 16 fields, to scale. Widths cluster; lengths spread out.](assets/new_width.svg)](assets/new_width.svg)
-  <figcaption>Median drumlin shape in each of the 16 fields, to scale. Widths cluster; lengths spread out.</figcaption>
-</figure>
-
-
-## Where this meets existing theory
-
-| Existing idea | What we found |
-| --- | --- |
-| **Bed instability sets drumlin size** ([Fowler & Chapwanya, 2014](https://royalsocietypublishing.org/doi/10.1098/rspa.2014.0185)) | **Supported for size.** Observed drumlins imply a natural length scale of about 400–450 m, a physically sensible value. |
-| **The same theory: faster ice makes stubbier drumlins** | **Contradicted.** Where flow converges and speeds up, drumlins get *longer*, in New York, Green Bay and Puget. |
-| **Elongation tracks ice speed**, with fast ice-stream beds grading into mega-scale lineations (a common textbook view) | **Only partly.** No single speed law fits across fields. Within a field, how long and how far ice slid over a spot predicts elongation better than speed alone. |
-| **Elongation grows with cumulative slip** ([Zoet et al., 2021](https://onlinelibrary.wiley.com/doi/10.1002/esp.5192)) | **Replicated** in Green Bay (+0.26) and pooled across fields (+0.21), but the coefficient is not shared between fields. |
-| **Stubby drumlins near the edge need a frozen ice margin** (an idea we tested) | **Not required.** The same inward gradient appears under warm-based ice at Múlajökull, and cumulative slip accounts for it. |
-| **Drumlin sizes from large hand-mapped samples** ([Clark et al., 2009](https://www.sciencedirect.com/science/article/abs/pii/S0277379108002540): mean 629 m long, 209 m wide, elongation 2.9) | **Consistent.** Our field medians are similar, for example Green Bay at 628 × 210 m and 2.93, which is a check on the detector. |
-| **Meltwater-flood and other formation ideas** | **Not tested.** Our data are shapes and positions, which cannot separate these mechanisms on their own. |
-
+- **They are a window on the ice-sheet bed.** How fast an ice sheet slides depends on what happens where ice meets soft, wet sediment. That is one of the least certain parts of forecasting how fast Antarctica and Greenland lose ice to the sea. The bed of a living ice sheet is almost impossible to observe, and old drumlin fields are its exposed floor.
+- **How they form is still debated.** Geologists have argued about it since the 1800s. Drumlins can be made of till, gravel or bedrock, so their contents alone do not settle it. Ideas range from ice moulding soft sediment, to meltwater floods, to a bed instability that grows bumps of a preferred size, like ripples in sand.
 
 ## Summary
 
-Drumlins form in two stages. A bed instability under sliding ice sets their starting size; afterwards, they keep lengthening for as long as ice flows over them. Across 16 drumlin fields and one modern glacier, that picture fits better than any law tying drumlin shape to ice speed.
+| Claim | Confidence | Main evidence |
+| --- | --- | --- |
+| Drumlins are stubbier within about 60 km of the maximum ice limit | Moderate | +0.28 ± 0.11 with a separate slope for each field; holds among hand-checked drumlins only (+0.27 ± 0.09); also at Múlajökull. Detection precision is only about 40% within 20 km of the limit. |
+| Converging ice flow goes with longer drumlins | Moderate | New York +1.20, Puget +0.65, Green Bay +0.54; a noise null test gives about 0 |
+| Margin and convergence effects share one coefficient across fields | Rejected | Per-field slopes differ widely |
+| Drumlin size is consistent with the Fowler & Chapwanya instability scale | Weak (a consistency check) | Implied l<sub>D</sub> ≈ 400–450 m, inside the theory's plausible range |
+| Till texture controls elongation | Not supported | No within-field link with clay, sand or stones |
+| Field-to-field differences in elongation | Unexplained | Nothing tested predicts them, and field rankings changed when the detector was corrected |
 
-- **Stage 1, size.** The Fowler & Chapwanya (2014) instability gives a natural length scale l<sub>D</sub> = √(η·u / (Δρ·g)), with fastest-growing bumps 1–2 l<sub>D</sub> long and 0.3–1 l<sub>D</sub> wide. Observed sizes imply l<sub>D</sub> ≈ 400–450 m. Median drumlin width is nearly constant across fields, at 184–327 m.
+Each within-field control explains only about 1–2% of the variation between individual drumlins; most of that variation is local.
 
-- **Stage 2, lengthening.** Within a field, elongation rises with time under ice, cumulative slip and converging flow; length carries the change, not width. Near ice-sheet margins this gives stubbier drumlins. The same gradient appears under warm-based ice in Iceland, so a frozen bed is not required.
+## What this adds
 
-- **What the data reject.** No single ice-speed law fits; the theory's prediction that faster ice makes stubbier drumlins fails. Between-field differences in elongation are not explained by exposure, margin distance, relief, latitude or till texture.
+Most of the ideas here have been raised before: drumlins shortening toward the ice limit was noted in Wisconsin a century ago ([Alden, 1918](https://npshistory.com/series/science/2/chap5.htm)). What this study adds is mainly method and scale. The list is limited to what survived the review, and our literature reading was not exhaustive.
 
-- **How much it explains.** Glaciological controls shift field averages by tens of percent. Each explains about 1% of the variation between individual drumlins; most of that variation is local.
+### One method, checked for bias, across 15 fields
 
-| Claim                                                                  | Confidence | Main evidence                                                                              |
-|------------------------------------------------------------------------|------------|--------------------------------------------------------------------------------------------|
-| Stubbier drumlins within about 60 km of the ice limit                  | High       | 4 cold-margin fields + Múlajökull; none beyond 60 km                                       |
-| Elongation grows with cumulative slip or time under ice, within fields | Moderate   | Pooled slope +0.21; explains the margin effect; replicates Zoet et al. (2021) in Green Bay |
-| Converging flow lengthens drumlins                                     | Moderate   | New York +0.9, Puget +0.4, Green Bay +0.4                                                  |
-| One shared coefficient across fields                                   | Rejected   | Per-field slopes range −2.6 to +0.45                                                       |
-| Width set by the instability scale, length by growth                   | Suggestive | Width varies 1.8× across fields, length 2.2×                                               |
-| Sandier till gives slightly bigger drumlins                            | Moderate   | +2–5% per 10% sand, within 20 km blocks                                                    |
+Automated drumlin mapping is not new ([Saha et al., 2011](https://www.sciencedirect.com/science/article/abs/pii/S0098300411001324)), but large inventories are still usually mapped region by region by hand. Here one detector, one classifier and one cutoff were run over 15 fields in North America, Britain, Ireland and Patagonia, and each field was checked blind.
 
 <figure markdown="span">
-  [![The drumlin field simulator](assets/simulator.png){ width="520" }](simulator.md)
-  <figcaption>Try the <a href="simulator/">interactive simulator</a>: drag the ice and bed sliders and watch a drumlin field grow.</figcaption>
+  ![Pipeline: fields, elevation, detector, classifier, blind check, shapes](assets/new_method.svg)
+  <figcaption>The same pipeline runs in every field, so shapes can be compared without differences in mapping style.</figcaption>
 </figure>
+
+### A measured shape bias in drumlin classifiers
+
+Our first classifier used length, width and elongation to decide what counts as a drumlin, so it favoured long, thin hills. Among hand-checked drumlins, the ones it kept at the 0.7 cutoff were 31% more elongated than all of them. Using a different cutoff in each field made between-field comparisons meaningless. A classifier with no shape inputs is almost as accurate (AUC 0.84 against 0.86) and cuts the bias to about 11% at the cutoff now used. Any automated drumlin inventory that classifies on shape is likely to carry this kind of bias.
+
+<figure markdown="span">
+  ![Bar chart of elongation inflation by classifier cutoff](assets/new_bias.svg)
+  <figcaption>How much more elongated the kept drumlins are than all hand-checked drumlins, by cutoff (blocked cross-validation on 448 confirmed drumlins).</figcaption>
+</figure>
+
+### The margin gradient, tested across several ice sheets
+
+Drumlins get stubbier toward the maximum ice limit, out to about 60 km. Alden (1918) saw this in the Green Bay Lobe. Here it holds in every cold-margin field near a dated limit: Green Bay, Langlade and Pierz (Laurentide) and Magellan–Otway (Patagonia). It also appears at a modern Icelandic surge glacier, and among hand-checked drumlins only. Puget, under temperate Cordilleran ice, shows none.
+
+<figure markdown="span">
+  ![Rows of drumlin shapes getting stubbier toward the ice limit](assets/new_margin.svg)
+  <figcaption>Average elongation by distance band, relative to each field's mean (pooled over 5 fields). Shape differences are drawn twice as large as measured.</figcaption>
+</figure>
+
+### Converging flow, with a null test
+
+Where ice flow converged, which usually means faster ice, drumlins are longer. This fits [Hess & Briner (2009)](https://nsmsites.caset.buffalo.edu/briner/buf/pubs/Hess_and_Briner_2009.pdf), who explained New York elongation by ice velocity. Flow here is traced from the drumlins' own orientations. Stubby drumlins have noisier orientations, so we checked that this noise alone cannot create the pattern: simulated noise gives a slope of about zero.
+
+<figure markdown="span">
+  ![Arrows spreading or converging over a short and a long drumlin](assets/new_convergence.svg)
+  <figcaption>Slope of log elongation on upstream flow convergence, with distance from the ice limit controlled for.</figcaption>
+</figure>
+
+## Where this meets existing work
+
+| Existing idea | What we found |
+| --- | --- |
+| **Bed instability sets drumlin size** ([Fowler & Chapwanya, 2014](https://royalsocietypublishing.org/doi/10.1098/rspa.2014.0185)) | **Consistent, but a weak test.** Observed sizes imply a length scale of about 400–450 m, inside the wide range the theory allows (190 m to 3.4 km). |
+| **The same theory: bedform type depends mainly on till grain size**, and only weakly on ice speed | **Not supported where we could test it.** Till texture from soil surveys shows no within-field link with elongation. An earlier version of this page said the theory predicts stubbier drumlins under faster ice. That was our own extrapolation, not the paper's claim, and is withdrawn. |
+| **Elongation reflects ice velocity** ([Hess & Briner, 2009](https://nsmsites.caset.buffalo.edu/briner/buf/pubs/Hess_and_Briner_2009.pdf), New York) | **Consistent.** Converging, faster flow goes with longer drumlins in New York, Puget and Green Bay. |
+| **Drumlins shorten toward the ice limit** ([Alden, 1918](https://npshistory.com/series/science/2/chap5.htm), Green Bay Lobe, which he put down to slower, spreading ice) | **Confirmed in more ice sheets.** Our data cannot tell slower ice from shorter time under ice as the cause. |
+| **Elongation grows with cumulative slip** ([Zoet et al., 2021](https://onlinelibrary.wiley.com/doi/10.1002/esp.5192)) | **Cannot be separated from distance here.** Our slip estimate is built from distance and time, so it adds nothing beyond them. Zoet et al.'s flowline method would be the proper test. |
+| **A frozen outer margin shaped Green Bay drumlins** ([WGNHS, 2019](https://data.wgnhs.wisc.edu/pubshare/WOFR2019-02.pdf)) | **Not required for the gradient.** The same inward gradient appears under warm-based ice at Múlajökull. It may still matter in Green Bay. |
+| **Drumlins are regularly spaced** ([Clark et al., 2018](https://eprints.whiterose.ac.uk/id/eprint/118197/)) | **Not seen in New York**, where spacing looked like randomly packed hills. That test used the earlier, biased selection and has not been rerun. |
+| **Drumlins grow longer and wider over time** ([Ely et al., 2018](https://eprints.whiterose.ac.uk/id/eprint/120713/)) | **An earlier claim that width stays fixed is withdrawn.** With unbiased selection, width and length vary between fields by similar amounts. |
 
 ## Caveats
 
-- **Who did this.** I'm not a geologist and have no training in glacial geomorphology. The analysis was done with Claude Opus, and drumlin labels came from me and from Claude Opus, Claude Sonnet and Claude Haiku, not from trained mappers.
-- **Not peer-reviewed.** No geologist has checked the methods or the conclusions. The claims of novelty rest on a limited literature search.
-- **Detection errors.** Blind checks put precision at 67–85% per field, so 15–33% of accepted "drumlins" may be something else (a moraine hummock, a kame, a hill cut by roads).
-- **Coarse inputs.** Ice-margin reconstructions are generalised and come in time slices of half a thousand years or more. Cumulative slip comes from a simple ice-profile model, not a calibrated reconstruction. Soil data come from map units, not boreholes.
-- **Correlation, not mechanism.** The results describe how drumlin shape varies; they do not show what physically causes it. Each control explains only about 1% of the variation between individual drumlins.
-- **Field choice.** The 16 fields are the ones where public elevation data and our detector worked well, not a designed sample.
+- **Who did this.** I'm not a geologist and have no training in glacial geomorphology. The analysis was done with Claude Opus. Drumlin labels came from me and from Claude Opus, Claude Sonnet and Claude Haiku, not from trained mappers, so "precision" means agreement with non-expert labels.
+- **Not peer-reviewed.** An AI reviewer acting as a geomorphologist found the problems listed below; no human geologist has checked the work.
+- **Detection errors.** Precision is 54–82% per field. Within 20 km of an ice limit it falls to about 40%, because moraine hummocks and kames are common there, and these false positives are stubby. The margin gradient also holds among hand-checked drumlins, but on fewer cases (234).
+- **Remaining shape bias.** The labels themselves may favour classic elongated hills, and the corrected classifier still keeps hills about 11% more elongated than the average confirmed drumlin.
+- **Coarse inputs.** Copernicus 30 m elevation outside the US is a surface model that includes trees and buildings. Ice-margin reconstructions are generalised, and their uncertainty is similar in size to the nearest distance band. Soil data come from map units, not boreholes.
+- **Choices made after looking.** The 60 km break and the "cold-margin" grouping were chosen after seeing the data. Treat their exact values as provisional.
+- **Correlation, not mechanism.** The results describe how shape varies; they do not show what causes it.
+
+## What changed after review
+
+The first version (November 3) made claims the data do not support. A review on November 4 led to these changes:
+
+- **Classifier.** Retrained without shape inputs, with one cutoff (0.6) for every field. Chippewa failed the new checks and was dropped, leaving 15 fields and 13,607 drumlins.
+- **Withdrawn:** "width is nearly fixed while length varies"; cumulative slip as independent evidence; the claim that Fowler & Chapwanya predict stubbier drumlins under faster ice; "high confidence" for the margin gradient.
+- **Strengthened:** the margin gradient (+0.16 to +0.24 pooled) and convergence (New York +0.92 to +1.20) under the corrected selection.
+- **Corrected:** background facts on drumlin height and shape, and the literature now credited.
