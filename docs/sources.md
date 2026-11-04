@@ -4,6 +4,7 @@
 
 - Fowler & Chapwanya (2014), An instability theory for the formation of ribbed moraine, drumlins and mega-scale glacial lineations, Proc. R. Soc. A 470: 20140185
 
+- [Clark et al. (2009), Size and shape characteristics of drumlins, derived from a large sample, and associated scaling laws](https://www.sciencedirect.com/science/article/abs/pii/S0277379108002540), Quaternary Science Reviews 28: 677–692
 - [Zoet et al. (2021), Factors that contribute to the elongation of drumlins beneath the Green Bay Lobe](https://onlinelibrary.wiley.com/doi/10.1002/esp.5192) (abstract via Crossref)
 
 - [Jónsson et al. (2014), The drumlin field and the geomorphology of the Múlajökull surge-type glacier](https://www.lunduniversity.lu.se/publication/8eaf9425-c4a4-4afd-b801-c26af5c2f655)
