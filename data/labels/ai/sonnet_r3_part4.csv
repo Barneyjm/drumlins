@@ -1,0 +1,117 @@
+sheet,pos,label,reason
+33,1,no,bump on rugged slope
+33,2,no,valley side spur
+33,3,no,terrace edge by river
+33,4,no,gullied bluff no herd
+33,5,unsure,hummocky with some parallel hills
+33,6,unsure,elongated ridge but valley edge
+33,7,no,hummocky hill country
+33,8,no,ridge between gullies
+33,9,no,low terrace by railway
+33,10,no,spur on valley side
+33,11,yes,small hill in parallel streamlined herd
+33,12,unsure,faint hill near streamlined set
+34,1,no,valley side feature
+34,2,no,step on large slope
+34,3,unsure,irregular outline near herd
+34,4,unsure,tiny outline in hummocky herd
+34,5,no,low mound on broad slope
+34,6,no,faint lump on ridge
+34,7,unsure,near elongated hills but flat
+34,8,no,valley side strip
+34,9,no,steep valley side
+34,10,no,low irregular terrace
+34,11,no,faint mound hill country
+34,12,no,river terrace spur
+35,1,no,sliver on steep slope
+35,2,yes,elongated hill in parallel herd
+35,3,no,step beside big valley
+35,4,no,valley side hills
+35,5,unsure,small outline among parallel ridges
+35,6,no,bluff by lake gullies
+35,7,yes,small streamlined hills share direction
+35,8,no,low terrace at lake
+35,9,no,gullied valley side
+35,10,yes,elongated hill among aligned hills
+35,11,no,spur on slope
+35,12,yes,oval hill in aligned group
+36,1,yes,teardrop hill in parallel herd
+36,2,no,hummocky slope no direction
+36,3,unsure,tiny outline between streamlined hills
+36,4,yes,elongated hill among parallel ridges
+36,5,unsure,edge of herd irregular outline
+36,6,no,faint lump on slope
+36,7,no,hill on valley side
+36,8,no,hummocky no shared direction
+36,9,yes,long cigar in parallel herd
+36,10,no,blocky mound not elongated
+36,11,no,small lump by lakeshore
+36,12,no,valley side strip
+37,1,no,lump on valley side
+37,2,no,winding narrow ridge esker-like
+37,3,yes,small hill amid parallel herd
+37,4,unsure,tiny outline near herd
+37,5,unsure,small knoll near elongated ridges
+37,6,no,faint lump on flat ground
+37,7,unsure,at herd edge on slope
+37,8,no,broad slope no oval
+37,9,no,gullied bluff
+37,10,no,steep valley side
+37,11,unsure,small mound near streamlined hills
+37,12,yes,elongated hill between parallel ridges
+38,1,no,ridge on lakeshore bluff
+38,2,unsure,small outline near herd
+38,3,yes,oval hills sharing direction
+38,4,no,hummocky no direction
+38,5,yes,hill among parallel ovals
+38,6,no,irregular hill on terrace
+38,7,yes,small hill by streamlined herd
+38,8,unsure,small sliver beside herd
+38,9,yes,hill among streamlined group
+38,10,yes,elongated oval in aligned herd
+38,11,unsure,tiny outline at herd edge
+38,12,unsure,small faint mound near herd
+39,1,unsure,hummocky patch among long ridges
+39,2,no,stream bank terrace
+39,3,unsure,small outline near herd
+39,4,no,ridge side bump
+39,5,no,tiny knoll hill country
+39,6,no,stream valley side
+39,7,no,irregular on subdivision terrain
+39,8,unsure,faint hill with weak alignment
+39,9,no,shore slope
+39,10,no,faint lump hummocky
+39,11,yes,cigar shaped hill in herd
+39,12,yes,elongated hill in parallel herd
+40,1,no,urban terrace flat
+40,2,unsure,elongated but on slope
+40,3,no,low mound by river
+40,4,no,valley side spur
+40,5,unsure,irregular among parallel ridges
+40,6,unsure,small outline between big drumlins
+40,7,yes,end of streamlined hill in herd
+40,8,unsure,narrow sliver faint ridges
+40,9,no,bump on bigger slope
+40,10,unsure,narrow strip among parallel ridges
+40,11,no,valley side strip
+40,12,yes,long cigar in parallel herd
+41,1,no,gullied slope spur
+41,2,yes,elongated hill aligned with others
+41,3,no,hummocky hill country
+41,4,no,irregular mound near roads
+41,5,unsure,long faint ridge on smooth slope
+41,6,no,lakeshore bluff
+41,7,no,step on big slope
+41,8,yes,oval hill in parallel herd
+41,9,no,valley side lump
+41,10,no,spur on slope
+41,11,yes,small oval among streamlined hills
+41,12,no,small lump hummocky
+42,1,no,spur on valley side
+42,2,no,hummocky no direction
+42,3,unsure,tiny outline in streamlined herd
+42,4,no,lump on flat ground
+42,5,unsure,small hill beside valley herd
+42,6,yes,elongated hill in aligned herd
+42,7,unsure,broad oval faint context
+42,8,no,hill in dissected terrain

@@ -1,0 +1,47 @@
+site_name: How Drumlins Form
+site_description: Evidence from 16 drumlin fields and one modern glacier
+site_url: https://barneyjm.github.io/drumlins/
+repo_url: https://github.com/Barneyjm/drumlins
+repo_name: Barneyjm/drumlins
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue grey
+      accent: light blue
+      toggle: {icon: material/weather-night, name: Dark mode}
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue grey
+      accent: light blue
+      toggle: {icon: material/weather-sunny, name: Light mode}
+  features:
+    - navigation.instant
+    - navigation.footer
+    - navigation.top
+    - toc.follow
+    - search.highlight
+    - content.code.copy
+markdown_extensions:
+  - tables
+  - attr_list
+  - md_in_html
+  - admonition
+  - toc: {permalink: true}
+  - pymdownx.arithmatex: {generic: true}
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+nav:
+  - Summary: index.md
+  - Data and methods: methods.md
+  - "Stage 1: size and spacing": stage-1-size.md
+  - "Stage 2: lengthening": stage-2-lengthening.md
+  - What did not hold: what-did-not-hold.md
+  - Governing relations: governing-relations.md
+  - Fields: fields.md
+  - Open questions: open-questions.md
+  - Simulator: simulator.md
+  - Code and data: code-and-data.md
+  - Sources: sources.md

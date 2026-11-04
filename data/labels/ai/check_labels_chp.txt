@@ -1,0 +1,4 @@
+chp 1 no no yes no yes yes no no no yes no yes
+chp 2 no no no no no yes yes yes no no no no
+chp 3 no no no yes no yes yes yes no yes no no
+chp 4 yes no no no yes yes no yes yes no yes no

@@ -1,0 +1,133 @@
+sheet,pos,label,reason
+01,1,no,not distinct streamlined hill
+01,2,no,not distinct streamlined hill
+01,3,no,not distinct streamlined hill
+01,4,yes,streamlined hill in parallel herd
+01,5,no,not distinct streamlined hill
+01,6,no,not distinct streamlined hill
+01,7,no,not distinct streamlined hill
+01,8,unsure,ambiguous context or shape
+01,9,yes,streamlined hill in parallel herd
+01,10,no,not distinct streamlined hill
+01,11,yes,streamlined hill in parallel herd
+01,12,no,not distinct streamlined hill
+02,1,yes,streamlined hill in parallel herd
+02,2,unsure,ambiguous context or shape
+02,3,no,not distinct streamlined hill
+02,4,unsure,ambiguous context or shape
+02,5,no,not distinct streamlined hill
+02,6,yes,streamlined hill in parallel herd
+02,7,no,not distinct streamlined hill
+02,8,no,not distinct streamlined hill
+02,9,unsure,ambiguous context or shape
+02,10,yes,streamlined hill in parallel herd
+02,11,no,not distinct streamlined hill
+02,12,yes,streamlined hill in parallel herd
+03,1,yes,streamlined hill in parallel herd
+03,2,yes,streamlined hill in parallel herd
+03,3,no,not distinct streamlined hill
+03,4,unsure,ambiguous context or shape
+03,5,no,not distinct streamlined hill
+03,6,unsure,ambiguous context or shape
+03,7,no,not distinct streamlined hill
+03,8,no,not distinct streamlined hill
+03,9,no,not distinct streamlined hill
+03,10,unsure,ambiguous context or shape
+03,11,unsure,ambiguous context or shape
+03,12,unsure,ambiguous context or shape
+04,1,unsure,ambiguous context or shape
+04,2,no,not distinct streamlined hill
+04,3,unsure,ambiguous context or shape
+04,4,no,not distinct streamlined hill
+04,5,yes,streamlined hill in parallel herd
+04,6,yes,streamlined hill in parallel herd
+04,7,unsure,ambiguous context or shape
+04,8,yes,streamlined hill in parallel herd
+04,9,unsure,ambiguous context or shape
+04,10,no,not distinct streamlined hill
+04,11,unsure,ambiguous context or shape
+04,12,unsure,ambiguous context or shape
+05,1,yes,streamlined hill in parallel herd
+05,2,no,not distinct streamlined hill
+05,3,unsure,ambiguous context or shape
+05,4,no,not distinct streamlined hill
+05,5,no,not distinct streamlined hill
+05,6,unsure,ambiguous context or shape
+05,7,no,not distinct streamlined hill
+05,8,no,not distinct streamlined hill
+05,9,yes,streamlined hill in parallel herd
+05,10,no,not distinct streamlined hill
+05,11,no,not distinct streamlined hill
+05,12,no,not distinct streamlined hill
+06,1,yes,streamlined hill in parallel herd
+06,2,no,not distinct streamlined hill
+06,3,no,not distinct streamlined hill
+06,4,unsure,ambiguous context or shape
+06,5,no,not distinct streamlined hill
+06,6,no,not distinct streamlined hill
+06,7,no,not distinct streamlined hill
+06,8,no,not distinct streamlined hill
+06,9,yes,streamlined hill in parallel herd
+06,10,yes,streamlined hill in parallel herd
+06,11,no,not distinct streamlined hill
+06,12,yes,streamlined hill in parallel herd
+07,1,unsure,ambiguous context or shape
+07,2,unsure,ambiguous context or shape
+07,3,unsure,ambiguous context or shape
+07,4,no,not distinct streamlined hill
+07,5,no,not distinct streamlined hill
+07,6,yes,streamlined hill in parallel herd
+07,7,no,not distinct streamlined hill
+07,8,no,not distinct streamlined hill
+07,9,no,not distinct streamlined hill
+07,10,no,not distinct streamlined hill
+07,11,unsure,ambiguous context or shape
+07,12,yes,streamlined hill in parallel herd
+08,1,no,not distinct streamlined hill
+08,2,yes,streamlined hill in parallel herd
+08,3,yes,streamlined hill in parallel herd
+08,4,no,not distinct streamlined hill
+08,5,yes,streamlined hill in parallel herd
+08,6,yes,streamlined hill in parallel herd
+08,7,yes,streamlined hill in parallel herd
+08,8,yes,streamlined hill in parallel herd
+08,9,yes,streamlined hill in parallel herd
+08,10,no,not distinct streamlined hill
+08,11,unsure,ambiguous context or shape
+08,12,no,not distinct streamlined hill
+09,1,unsure,ambiguous context or shape
+09,2,no,not distinct streamlined hill
+09,3,yes,streamlined hill in parallel herd
+09,4,no,not distinct streamlined hill
+09,5,no,not distinct streamlined hill
+09,6,unsure,ambiguous context or shape
+09,7,no,not distinct streamlined hill
+09,8,no,not distinct streamlined hill
+09,9,yes,streamlined hill in parallel herd
+09,10,no,not distinct streamlined hill
+09,11,unsure,ambiguous context or shape
+09,12,no,not distinct streamlined hill
+10,1,no,not distinct streamlined hill
+10,2,yes,streamlined hill in parallel herd
+10,3,no,not distinct streamlined hill
+10,4,no,not distinct streamlined hill
+10,5,no,not distinct streamlined hill
+10,6,no,not distinct streamlined hill
+10,7,unsure,ambiguous context or shape
+10,8,yes,streamlined hill in parallel herd
+10,9,no,not distinct streamlined hill
+10,10,yes,streamlined hill in parallel herd
+10,11,no,not distinct streamlined hill
+10,12,no,not distinct streamlined hill
+11,1,yes,streamlined hill in parallel herd
+11,2,unsure,ambiguous context or shape
+11,3,yes,streamlined hill in parallel herd
+11,4,no,not distinct streamlined hill
+11,5,no,not distinct streamlined hill
+11,6,yes,streamlined hill in parallel herd
+11,7,no,not distinct streamlined hill
+11,8,no,not distinct streamlined hill
+11,9,no,not distinct streamlined hill
+11,10,unsure,ambiguous context or shape
+11,11,no,not distinct streamlined hill
+11,12,yes,streamlined hill in parallel herd

@@ -1,0 +1,3 @@
+cd /home/claude/stg && python3 run_ny.py > run_ny.log 2>&1 && PRE_CLOSE=3 SUF=_closed3 python3 candidates.py > cand.log 2>&1 && python3 /home/claude/score_field.py /home/claude/stg > score.log 2>&1 && python3 check_sheets.py > chk.log 2>&1; echo "stg done $?" >> /home/claude/fields_pl.log
+while pgrep -f "fetch_pl.py zbo" > /dev/null; do sleep 10; done
+cd /home/claude/zbo && python3 run_ny.py > run_ny.log 2>&1 && PRE_CLOSE=3 SUF=_closed3 python3 candidates.py > cand.log 2>&1 && python3 /home/claude/score_field.py /home/claude/zbo > score.log 2>&1 && python3 check_sheets.py > chk.log 2>&1; echo "zbo done $?" >> /home/claude/fields_pl.log

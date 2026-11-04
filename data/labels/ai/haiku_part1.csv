@@ -1,0 +1,97 @@
+sheet,pos,label,reason
+01,1,no,river bank hummocky irregular outline
+01,2,unsure,small outline between steep ridges
+01,3,no,small bump on steep slope
+01,4,yes,elongated cigar with parallel NW neighbours
+01,5,unsure,small irregular outline on flat ground
+01,6,unsure,thin elongated outline on striped ground
+01,7,no,irregular outline in hummocky ground
+01,8,no,oval sits on steep valley side
+01,9,unsure,small sliver on hummocky slope
+01,10,unsure,teardrop on plain with few neighbours
+01,11,yes,tiny elongated hill within parallel herd
+01,12,unsure,tiny outline shape unclear among herd
+02,1,no,tiny bump on rough shore ground
+02,2,no,outline on stepped terrace slope
+02,3,no,blocky outline on flat ground
+02,4,no,tiny spot in rough hummocky ground
+02,5,unsure,small oval at shore edge
+02,6,yes,elongated oval within parallel ridges
+02,7,unsure,small oval on flat ground no herd
+02,8,yes,teardrop in parallel herd
+02,9,yes,elongated oval in herd
+02,10,yes,small elongated hill in herd
+02,11,unsure,large oval on steep ridge flank
+02,12,no,tiny spot in rough ground
+03,1,yes,elongated ridge in parallel streamlined herd
+03,2,no,dendritic stream valley terrain
+03,3,unsure,narrow ridge in lobate hummocky ground
+03,4,no,large irregular outline on rough ground
+03,5,no,tiny knob by water
+03,6,no,narrow sliver on valley-side slope
+03,7,unsure,triangular outline between large ridges
+03,8,unsure,triangular tip of ridge
+03,9,yes,narrow elongated hill in herd
+03,10,yes,elongated hill in streamlined herd
+03,11,yes,small oval among dense herd
+03,12,no,tiny outline on rough ground
+04,1,unsure,diagonal hummocky hill unclear shape
+04,2,no,lake and channel with no clear hill
+04,3,no,blocky outline at lake bay tip
+04,4,yes,elongated oval in parallel herd
+04,5,no,tiny knob at lake shore
+04,6,yes,narrow elongated hill in herd
+04,7,unsure,triangular outline between ridges
+04,8,unsure,triangular tip of streamlined ridge
+04,9,yes,elongated hill in herd
+04,10,yes,elongated hill in herd
+04,11,unsure,tiny outline in herd
+04,12,no,tiny outline in rugged dendritic ground
+05,1,unsure,small knoll on hummocky ground
+05,2,unsure,small outline in gully among ridges
+05,3,no,tiny outline by valley edge
+05,4,unsure,small outline at centre of herd
+05,5,yes,narrow elongated hill in herd
+05,6,unsure,small narrow outline on ridge flank
+05,7,yes,elongated hill in parallel herd
+05,8,yes,elongated hill in parallel herd
+05,9,yes,elongated hill in herd
+05,10,no,small hummocky patch not streamlined
+05,11,unsure,tiny outline on herd edge
+05,12,unsure,elongated outline unclear at herd edge
+06,1,no,tiny outline in hummocky ground
+06,2,no,thin sliver on striped terrace
+06,3,no,large irregular outline on hummocky flat
+06,4,no,small outline in rough ground
+06,5,no,outline on rough stony ground
+06,6,unsure,tiny outline on flank of long ridge
+06,7,yes,small elongated hill in herd
+06,8,unsure,elongated outline on mottled texture
+06,9,yes,elongated hill in herd
+06,10,no,small patch on shore rough ground
+06,11,unsure,tiny outline on smooth ground
+06,12,unsure,small outline no clear shape
+07,1,no,outline on rough crumpled terrain
+07,2,unsure,small elongated outline near herd
+07,3,yes,elongated hill in parallel herd
+07,4,no,large irregular outline on flat ground
+07,5,no,tiny outline on rough shore ground
+07,6,unsure,small elongated outline on herd flank
+07,7,no,small triangle near shore
+07,8,yes,elongated hill in parallel herd
+07,9,yes,elongated hill in herd
+07,10,yes,elongated hill in herd
+07,11,yes,elongated hill in dense herd
+07,12,unsure,small triangle at ridge end
+08,1,no,tiny ring in hummocky ground
+08,2,unsure,tiny outline on herd edge
+08,3,unsure,outline on herd flank unclear
+08,4,no,small ring in hummocky ground
+08,5,no,small outline in rough ground
+08,6,unsure,small outline on ridge flank
+08,7,unsure,small outline unclear shape
+08,8,yes,elongated outline in herd
+08,9,yes,elongated outline in herd
+08,10,no,small outline in hummocky ground
+08,11,unsure,small outline on ridge
+08,12,yes,elongated outline in parallel herd

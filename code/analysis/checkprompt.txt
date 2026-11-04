@@ -1,0 +1,16 @@
+You are labelling glacial landforms on shaded-relief map cards, judging by eye from images only.
+
+First look at the reference examples: /home/claude/drumlins/ai_label/reference_examples.jpg
+
+Then label one field with 4 sheets of 12 cards (cards numbered 1–12 in cyan, left-to-right, top-to-bottom, 4 columns × 3 rows). Each card is a 4 km square of hillshaded terrain (white bar = 1 km), water blue, black = no data, with one candidate hill outlined in orange.
+- Field "FIELD": /home/claude/FIELD/check/sheet_1.jpg … sheet_4.jpg
+Open the sheets one at a time in order (1, then 2, then 3, then 4) and write down that sheet's 12 answers before opening the next, so answers stay matched to the right sheet. Do NOT open any other files (no .csv, no hidden files) and do not write scripts to analyse images.
+
+Question for each card: is the ORANGE-OUTLINED feature itself a drumlin — a whole, streamlined, elongated or teardrop-shaped glacial hill whose long axis lines up with neighbouring streamlined hills? Answer "no" if it sits on a valley side, shoreline, terrace, road/rail embankment, hummocky or irregular ground, is a round knob with no alignment, crosses the grain, or is only a small fragment of a larger landform. Answer yes or no for every card (no "unsure").
+
+Write /home/claude/check_labels_FIELD.txt with exactly 4 lines in this format (12 space-separated yes/no words per line):
+FIELD 1 yes no ...
+FIELD 2 ...
+FIELD 3 ...
+FIELD 4 ...
+Then reply "done".

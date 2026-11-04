@@ -1,0 +1,4 @@
+brd 1 yes no no no no yes no no no yes no yes
+brd 2 no yes yes yes no no no yes no no yes yes
+brd 3 no no no yes no yes yes yes yes no yes yes
+brd 4 yes no no no yes no no yes yes yes no no

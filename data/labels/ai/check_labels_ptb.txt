@@ -1,0 +1,4 @@
+ptb 1 yes no no no no yes yes no no no no yes
+ptb 2 no no yes no yes no yes no yes no yes no
+ptb 3 no yes no yes no no yes yes yes no no yes
+ptb 4 yes no no no no yes yes no yes yes yes no

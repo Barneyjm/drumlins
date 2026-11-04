@@ -1,0 +1,85 @@
+sheet,pos,label,reason
+16,1,unsure,tiny lump between herd hills
+16,2,unsure,irregular blob beside herd
+16,3,yes,elongated hill in parallel herd
+16,4,no,hummocky no shared direction
+16,5,no,spur on slope edge
+16,6,no,speck on rim of large landform
+16,7,no,round lump between big hills
+16,8,unsure,faint elongate lump on streaked slope
+16,9,no,hillside by shore
+16,10,yes,narrow hill within parallel herd
+16,11,no,small hummock in rough terrain
+16,12,no,valley side spur
+17,1,unsure,small blob beside herd
+17,2,no,flat shoreline area
+17,3,no,hummocky hill country
+17,4,no,edge of lake shore
+17,5,unsure,tiny speck among large drumlins
+17,6,no,small bump on lake plain
+17,7,no,part of larger slope
+17,8,yes,elongate hill beside parallel herd
+17,9,no,shore embankment
+17,10,no,small blob with no herd
+17,11,unsure,oval but terrain texture unclear
+17,12,no,tiny faint lump on flat
+18,1,no,hummocky valley side
+18,2,no,tiny bump on slope
+18,3,unsure,blobby hill in streamlined terrain
+18,4,yes,thin hill among parallel streamlined hills
+18,5,no,faint on broad slope
+18,6,no,hummocky no direction
+18,7,unsure,blob beside herd
+18,8,no,hummocky spur
+18,9,no,valley edge sliver
+18,10,no,tiny lump on flat
+18,11,yes,oval hill in parallel herd
+18,12,no,small lobe on slope
+19,1,yes,elongate hill in parallel herd
+19,2,no,valley edge sliver
+19,3,yes,small hill among streamlined herd
+19,4,unsure,blob on flat among herd
+19,5,no,tiny lump on flat
+19,6,no,spur by stream valley
+19,7,yes,narrow hill in parallel herd
+19,8,no,irregular lobe in hummocks
+19,9,yes,elongate hill in parallel herd
+19,10,yes,elongate hill at herd edge
+19,11,unsure,small blob in hummocky ground
+19,12,no,faint lump on broad slope
+20,1,unsure,blob beside large drumlins
+20,2,unsure,tiny speck at drumlin edge
+20,3,no,tiny lumps on flat
+20,4,no,faint irregular on flat
+20,5,unsure,blob at base of drumlins
+20,6,no,faint lump on slope
+20,7,unsure,edge of drumlin field
+20,8,yes,small hill within parallel herd
+20,9,no,faint lump on flat
+20,10,no,flat irregular area
+20,11,yes,elongate hill in parallel herd
+20,12,no,tiny bump on slope
+21,1,no,lump on bigger hill
+21,2,no,part of hummocky slope
+21,3,no,faint lump on flat ridge
+21,4,no,tiny speck on flat
+21,5,no,irregular on valley slope
+21,6,unsure,small bump between streamlined hills
+21,7,unsure,speck on flat among herd
+21,8,yes,oval hill among alike hills
+21,9,no,slope bump
+21,10,unsure,elongate hill by lake unclear
+21,11,no,roundish no clear herd
+21,12,no,tiny bump near scarp
+22,1,no,lump on valley slope
+22,2,unsure,blob on flat among herd
+22,3,yes,oval hill in parallel herd
+22,4,no,spur on valley side
+22,5,yes,long hill in parallel herd
+22,6,unsure,elongate on slope faint ridges
+22,7,no,irregular lump on flat
+22,8,no,tiny lump near road
+22,9,no,shore edge bump
+22,10,no,shore edge sliver
+22,11,no,faint flat lump
+22,12,no,sliver on valley side

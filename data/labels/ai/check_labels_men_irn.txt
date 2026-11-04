@@ -1,0 +1,8 @@
+men 1 yes no no no yes yes yes no no yes no yes
+men 2 no yes no yes yes yes yes no no no yes yes
+men 3 yes yes no yes no no no no no no no yes
+men 4 yes yes no yes yes yes yes yes yes no yes no
+irn 1 no no no no no no no no no no no no
+irn 2 no no no yes no no yes no no no no no
+irn 3 no no no yes no no yes no no no no yes
+irn 4 no yes no no no yes no no yes no no no

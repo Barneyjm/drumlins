@@ -1,0 +1,8 @@
+lg 1 no no no no no yes no no no no no yes
+lg 2 no no yes yes no yes no yes yes no yes yes
+lg 3 no yes no yes no yes no yes yes yes no no
+lg 4 yes no no no no no yes yes yes no yes no
+tm 1 yes no yes no yes no no yes yes no yes no
+tm 2 yes no no no no yes yes no no yes no no
+tm 3 no yes no yes no no yes yes no yes yes no
+tm 4 yes yes no no yes yes yes no yes no yes no

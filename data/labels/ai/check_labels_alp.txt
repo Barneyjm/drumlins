@@ -1,0 +1,4 @@
+alp 1 no no no no no yes no no no yes no no
+alp 2 no no yes yes no yes no no yes no no no
+alp 3 yes no no no yes no no yes no no no no
+alp 4 yes no no no no yes no yes no no no no

@@ -1,0 +1,121 @@
+sheet,pos,label,reason
+23,1,yes,hill within streamlined herd
+23,2,no,ridged hill country
+23,3,yes,parallel streamlined herd
+23,4,no,hummocky near river
+23,5,unsure,broad ridge in herd
+23,6,no,valley slope bump
+23,7,no,hummocky no direction
+23,8,no,embankment
+23,9,unsure,elongated but fan-like slope
+23,10,no,spur in dissected hills
+23,11,no,hill country bump
+23,12,unsure,broad hill faint alignment
+24,1,unsure,hummocky among streamlined hills
+24,2,no,hummocky hill country
+24,3,yes,elongated in clear herd
+24,4,no,broad hummocky slope
+24,5,unsure,mixed hummocky and streamlined
+24,6,yes,oval hill in herd
+24,7,yes,streamlined hill in herd
+24,8,yes,tiny hill in herd
+24,9,yes,small hill among parallel hills
+24,10,no,long narrow winding ridge
+24,11,no,hilly slope
+24,12,unsure,tiny at edge of herd
+25,1,yes,elongated hill in herd
+25,2,no,hummocky flat
+25,3,unsure,tiny among ridges
+25,4,unsure,tiny hill among spurs
+25,5,yes,elongated hill in herd
+25,6,no,hummocky
+25,7,yes,streamlined hill in herd
+25,8,no,broad blurry slope
+25,9,unsure,tiny faint herd
+25,10,unsure,tiny elongated faint herd
+25,11,yes,small hill in herd
+25,12,no,spur by lake
+26,1,yes,elongated in dense herd
+26,2,no,bump on slope
+26,3,yes,teardrop on flat
+26,4,no,dissected valley sides
+26,5,no,shore spur
+26,6,no,broad hill
+26,7,no,spur between lakes
+26,8,yes,narrow hill in herd
+26,9,unsure,edge of herd
+26,10,no,hummocky
+26,11,yes,small hill in dense herd
+26,12,yes,oval hill in herd
+27,1,yes,small hill in herd
+27,2,no,hilly dissected
+27,3,unsure,tiny in herd area
+27,4,no,hummocky flat
+27,5,yes,elongated in herd
+27,6,unsure,small at herd base
+27,7,yes,elongated in herd
+27,8,unsure,tiny at shore
+27,9,no,shore ridge
+27,10,unsure,faint hills
+27,11,no,hummocky
+27,12,unsure,hill with faint herd
+28,1,unsure,tiny among herd
+28,2,no,winding elongated ridge
+28,3,no,shore edge
+28,4,yes,small hill in herd
+28,5,unsure,shore small hill
+28,6,yes,oval hill in herd
+28,7,unsure,irregular on flat
+28,8,yes,narrow hill in herd
+28,9,no,hilly slope
+28,10,no,dissected hills
+28,11,no,valley side
+28,12,no,hummocky
+29,1,no,hilly slope
+29,2,yes,small hill in herd
+29,3,no,water
+29,4,yes,elongated at shore in herd
+29,5,no,broad hillside
+29,6,no,valley side
+29,7,no,round bump on hill
+29,8,no,hummocky
+29,9,no,terrace strip
+29,10,no,hillside
+29,11,yes,elongated hill in herd
+29,12,unsure,faint herd
+30,1,no,hummocky
+30,2,no,shore edge
+30,3,unsure,hummocky beside herd
+30,4,unsure,shore elongated
+30,5,no,broad hill
+30,6,yes,narrow hill in herd
+30,7,unsure,faint hill
+30,8,no,dissected slope
+30,9,unsure,small near herd
+30,10,no,broad hillside
+30,11,no,hummocky
+30,12,no,gully on slope
+31,1,yes,small hill in dense herd
+31,2,no,broad hill
+31,3,yes,small hill in herd
+31,4,no,broad faint
+31,5,unsure,faint hills
+31,6,unsure,small mixed hills
+31,7,yes,elongated in herd
+31,8,unsure,small at base of herd
+31,9,yes,elongated in herd
+31,10,no,hilly dissected
+31,11,no,broad flat area
+31,12,unsure,mixed hummocky
+32,1,no,hillside bump
+32,2,no,hummocky
+32,3,no,valley side
+32,4,unsure,small near herd
+32,5,no,shore hillside
+32,6,unsure,streaky faint
+32,7,no,broad hill
+32,8,no,gully
+32,9,no,shore hillside
+32,10,no,quarry area
+32,11,unsure,large irregular
+32,12,no,gullied slope

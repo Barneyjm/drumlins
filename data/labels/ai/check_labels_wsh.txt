@@ -1,0 +1,4 @@
+wsh 1 no no no no no yes yes no no no no no
+wsh 2 no yes yes no yes yes no no yes no yes yes
+wsh 3 no no no yes yes yes no yes no yes yes yes
+wsh 4 no yes no no no no yes no no no yes no
