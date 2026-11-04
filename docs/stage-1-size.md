@@ -20,8 +20,20 @@ Here η is ice viscosity, u is sliding speed and Δρ ≈ 83 kg/m³ is the water
 
 Low Π favours broad ribs across the flow; high Π favours long, narrow hills. The theory sets no lower size limit, and nothing longer than about 30–70 l<sub>D</sub> can grow.
 
+<figure markdown="span">
+  ![Top: growth rate of bed bumps by downstream and transverse wavenumber for three values of Π; stars mark the fastest-growing mode (ribs, drumlins, lineations). Bottom left: New York 10 km tiles against the predicted fastest-growing drumlin shape, at the paper's scale and rescaled to l<sub>D</sub> ≈ 450 m. Bottom right: share of elongation that comes from lengthening.](assets/stability_vs_field.jpg)
+  <figcaption>Top: growth rate of bed bumps by downstream and transverse wavenumber for three values of Π; stars mark the fastest-growing mode (ribs, drumlins, lineations). Bottom left: New York 10 km tiles against the predicted fastest-growing drumlin shape, at the paper's scale and rescaled to l<sub>D</sub> ≈ 450 m. Bottom right: share of elongation that comes from lengthening.</figcaption>
+</figure>
+
+
 **Spacing.** In New York, spacing was no more regular than randomly packed hills of similar size (a hard-core null). An object-shuffle spectral test agreed. The field looks like packed individuals, not a wave train.
 
 **Width barely varies.** Across 16 fields, median width spans 184–327 m, while median length spans 543–1,205 m. Field elongation tracks length (ρ = +0.61, p = 0.01), not width (ρ = −0.02). Our reading: the instability fixes width near its own scale, and growth sets the length.
 
 **Till texture shifts size, not shape.** Within 20 km blocks, each extra 10% sand in the till goes with drumlins 2–5% longer and wider, while elongation is unchanged. Clay looked strong between fields (ρ = −0.77 for both length and width), but that vanishes within fields once sand is included.
+
+
+<figure markdown="span">
+  ![New York: till texture from the USDA soil survey (deepest till horizon) against drumlin shape and size, 61 tiles of 10 km. Stone and sand content do not track elongation; stonier till goes with wider drumlins.](assets/texture_test.jpg)
+  <figcaption>New York: till texture from the USDA soil survey (deepest till horizon) against drumlin shape and size, 61 tiles of 10 km. Stone and sand content do not track elongation; stonier till goes with wider drumlins.</figcaption>
+</figure>

@@ -22,3 +22,8 @@ Drumlins form in two stages. A bed instability under sliding ice sets their star
 | One shared coefficient across fields                                   | Rejected   | Per-field slopes range −2.6 to +0.45                                                       |
 | Width set by the instability scale, length by growth                   | Suggestive | Width varies 1.8× across fields, length 2.2×                                               |
 | Sandier till gives slightly bigger drumlins                            | Moderate   | +2–5% per 10% sand, within 20 km blocks                                                    |
+
+<figure markdown="span">
+  [![The drumlin field simulator](assets/simulator.png){ width="520" }](simulator.md)
+  <figcaption>Try the <a href="simulator/">interactive simulator</a>: drag the ice and bed sliders and watch a drumlin field grow.</figcaption>
+</figure>

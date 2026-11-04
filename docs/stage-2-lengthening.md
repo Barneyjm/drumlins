@@ -12,6 +12,18 @@ Within a field, drumlins get longer the more ice has flowed over them. The clear
 
 **Converging flow.** Convergence measured from drumlin orientations lengthens drumlins: New York +0.92, Green Bay +0.41 and Puget +0.38, with distance controlled for. Green Bay's raw slope was −0.11 until margin distance was included, because flow spread out where the bed was briefly covered.
 
+<figure markdown="span">
+  ![Central New York. Left: ice-flow lines traced from drumlin orientations, with tile elongation as dots and flowline convergence shaded. Right: tile elongation rises with convergence over 20 km upstream (r = 0.63; partial r = 0.40 after controls).](assets/flow_convergence.jpg)
+  <figcaption>Central New York. Left: ice-flow lines traced from drumlin orientations, with tile elongation as dots and flowline convergence shaded. Right: tile elongation rises with convergence over 20 km upstream (r = 0.63; partial r = 0.40 after controls).</figcaption>
+</figure>
+
+
 **Múlajökull, Iceland.** In this warm-based surge glacier's forefield, elongation rises inward from the outer moraine (+0.13 ± 0.04, 88 drumlins). Inside the 1954–1992 surge-moraine cluster, every drumlin went through the same surges, yet drumlins still lengthen inward (+0.20). That points to growth during quiet flow between surges, not to surge count. Jónsson et al. (2014) mapped the same trend.
+
+<figure markdown="span">
+  ![Múlajökull forefield on 4 m ArcticDEM hillshade, with the drumlins kept for analysis outlined.](assets/mula_kept.jpg){ width="420" }
+  <figcaption>Múlajökull forefield on 4 m ArcticDEM hillshade, with the drumlins kept for analysis outlined.</figcaption>
+</figure>
+
 
 **Limits.** None of these exposure measures holds a shared coefficient across fields, and none predicts between-field differences. They describe how drumlins change within a field.

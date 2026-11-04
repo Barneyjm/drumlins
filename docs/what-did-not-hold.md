@@ -14,3 +14,8 @@ Several ideas we tested, including the instability theory's speed prediction, fa
 | Model-based cumulative sliding                    | Shallow-ice model exposure, 3 fields              | Fails out of sample; model too coarse (2 km grid, speed never calibrated)                                      |
 | Readvance step                                    | Drumlins either side of a readvance line          | Not testable: no readvance zone with surviving drumlins found (Fox Valley, Killard Point, Loch Lomond checked) |
 | Surge count as the clock                          | Múlajökull surge-moraine step                     | No step at the 1954–1992 cluster (+0.09, p = 0.18); smooth gradient instead                                    |
+
+<figure markdown="span">
+  ![Shallow-ice model test, Central New York. Left: modelled ice speed and flowlines, with observed tile elongation as dots. Centre: model flow matches drumlin orientation to a median 11°. Right: faster modelled ice goes with longer drumlins (r = 0.53), but elongation does not follow (r = 0.37, not significant).](assets/icemodel_results.jpg)
+  <figcaption>Shallow-ice model test, Central New York. Left: modelled ice speed and flowlines, with observed tile elongation as dots. Centre: model flow matches drumlin orientation to a median 11°. Right: faster modelled ice goes with longer drumlins (r = 0.53), but elongation does not follow (r = 0.37, not significant).</figcaption>
+</figure>

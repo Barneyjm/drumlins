@@ -17,7 +17,6 @@ theme:
       accent: light blue
       toggle: {icon: material/weather-sunny, name: Light mode}
   features:
-    - navigation.instant
     - navigation.footer
     - navigation.top
     - toc.follow
