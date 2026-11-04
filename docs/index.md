@@ -2,6 +2,23 @@
 
 *James · November 2026*
 
+## What drumlins are and why they matter
+
+A drumlin is a streamlined hill shaped by an ice sheet flowing over its bed: blunt and steep on the end that faced the oncoming ice, tapering toward the end the ice flowed off. Typical drumlins are a few hundred metres to a kilometre or so long, a few hundred metres wide and tens of metres high. They rarely occur alone; they come in fields of hundreds to thousands, often described as a "basket of eggs" landscape. The name comes from the Irish *droimnín*, "little ridge". Large fields cover parts of New York, Wisconsin, Minnesota, Michigan, Canada, Ireland and Britain, all left by ice sheets that melted away at the end of the last ice age.
+
+<figure markdown="span">
+  ![Hillshade of drumlins in the Central New York field](assets/ny_hillshade.jpg)
+  <figcaption>About 7 × 5 km of the Central New York drumlin field, near the north end of Canandaigua Lake (USGS 3DEP 10 m elevation, lit from the northwest). Ice flowed roughly north-northeast to south-southwest, along the long axes of the hills; each hill is a drumlin.</figcaption>
+</figure>
+
+**Why they matter.**
+
+- **They record how ice sheets moved.** Drumlins line up with the flow, so geologists use them to map where vanished ice sheets went and how their flow changed as they retreated.
+- **They are a window on the ice-sheet bed.** How fast an ice sheet slides depends on what happens where ice meets soft, wet sediment, and that is one of the least certain parts of forecasting how fast Antarctica and Greenland lose ice to the sea. The bed of a living ice sheet is almost impossible to observe; old drumlin fields are its exposed floor, with tens of thousands of examples.
+- **How they form is still unsolved.** Geologists have argued about it since the 1800s. Drumlins can be made of till, gravel or bedrock, so their contents alone do not settle it. Theories range from ice moulding soft sediment to meltwater floods to a bed instability, like ripples in sand, that grows bumps of a preferred size.
+
+This study tests that last idea, and what happens after the bumps form, against drumlin shapes measured across 16 fields on three continents.
+
 ## Summary
 
 Drumlins form in two stages. A bed instability under sliding ice sets their starting size; afterwards, they keep lengthening for as long as ice flows over them. Across 16 drumlin fields and one modern glacier, that picture fits better than any law tying drumlin shape to ice speed.
